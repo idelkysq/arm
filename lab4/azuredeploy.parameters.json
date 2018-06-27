@@ -1,0 +1,20 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "adminUsername": {
+        "value": "idelkys"
+      },
+      "adminPassword": {
+        "reference": {
+          "keyVault": {
+            "id": "/subscriptions/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd/resourceGroups/keyVaults/providers/Microsoft.KeyVault/vaults/idelkyskeyvault"
+          },
+          "secretName": "ubuntuDefaultPassword"
+        }
+      },
+      "dnsLabelPrefix": {
+        "value": "idelkyslab3vm2"
+      }
+    }
+  }
